@@ -11,10 +11,10 @@ public class ContadorPalavras {
 
         try {
             // Abrir o arquivo de entrada
-            BufferedReader reader = new BufferedReader(new FileReader(inputFile));
+            FileReader fileReader = new FileReader(inputFile);
 
             // Criar um buffer para otimizar a leitura
-            BufferedReader bufferedReader = new BufferedReader(reader);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
 
             // Realizar a contagem de palavras
             int wordCount = 0;
