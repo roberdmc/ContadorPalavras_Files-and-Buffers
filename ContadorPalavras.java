@@ -28,11 +28,12 @@ public class ContadorPalavras {
             bufferedReader.close();
 
             // Gravar o resultado no arquivo de saída
-            BufferedWriter writer = new BufferedWriter(new FileWriter(outputFile));
-            writer.write("Número de palavras: " + wordCount);
+            FileWriter fileWriter = new FileWriter(outputFile);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
+            bufferedWriter.write("Número de palavras: " + wordCount);
 
             // Fechar o arquivo de saída
-            writer.close();
+            bufferedWriter.close();
 
             System.out.println("Contagem de palavras concluída. O resultado foi gravado em \"" + outputFile + "\".");
         } catch (IOException e) {
