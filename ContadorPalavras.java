@@ -17,7 +17,7 @@ public class ContadorPalavras {
       // Criar um buffer para otimizar a leitura
       BufferedReader bufferedReader = new BufferedReader(fileReader);
 
-      // Realizar a contagem de palavras
+      // Exibir o conteudo e Realizar a contagem de palavras
       int wordCount = 0;
       String line;
       System.out.println("Conteudo de \"" + inputFile + "\": \n");
@@ -41,14 +41,19 @@ public class ContadorPalavras {
 
       System.out.println("Contagem de palavras concluída. O resultado foi gravado em \"" + outputFile + "\". \n\n");
 
+      // Ler o arquivo escrito anteriormente
       fileReader = new FileReader(outputFile);
       bufferedReader = new BufferedReader(fileReader);
 
+      // Exibir o conteudo
       System.out.println("Conteudo de \"" + outputFile + "\": \n");
       while ((line = bufferedReader.readLine()) != null) {
         System.out.println(line);
       }
       System.out.println();
+
+      // Fechar o arquivo
+      bufferedReader.close();
     } catch (IOException e) {
       System.err.println("Erro ao manipular arquivos: " + e.getMessage());
     }
