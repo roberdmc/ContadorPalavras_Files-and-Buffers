@@ -1,9 +1,3 @@
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-
 public class ContadorPalavras {
     public static void main(String[] args) {
     String inputFile = "input.txt";
@@ -20,7 +14,7 @@ public class ContadorPalavras {
       // Realizar a contagem de palavras
       int wordCount = 0;
       String line;
-      System.out.println("Conteudo de \"input.txt\": \n");
+      System.out.println("Conteudo de \"" + inputFile + "\": \n");
       while ((line = bufferedReader.readLine()) != null) {
         System.out.println(line);
         String[] words = line.split("\\s+");
@@ -44,7 +38,7 @@ public class ContadorPalavras {
       fileReader = new FileReader(outputFile);
       bufferedReader = new BufferedReader(fileReader);
 
-      System.out.println("Conteudo de \"output.txt\": \n");
+      System.out.println("Conteudo de \"" + outputFile + "\": \n");
       while ((line = bufferedReader.readLine()) != null) {
         System.out.println(line);
       }
